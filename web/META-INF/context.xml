@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/portal">
+<Resource name="jdbc/latam1" auth="Container" type="javax.sql.DataSource"
+	maxActive="100" maxIdle="30" maxWait="10000"
+	username="latam" password="latam" driverClassName="oracle.jdbc.driver.OracleDriver"
+	url="jdbc:oracle:thin:@//ARDC1SRP-SCAN.prosegur.com.ar:1521/latam"/>
+	
+<Resource name="jdbc/emea" auth="Container" type="javax.sql.DataSource"
+	maxActive="100" maxIdle="30" maxWait="10000"
+	username="emea" password="emea" driverClassName="oracle.jdbc.driver.OracleDriver"
+	url="jdbc:oracle:thin:@//ARDC1SRP-SCAN.prosegur.com.ar:1521/emea"/>
+	
+<Resource name="jdbc/latam2" auth="Container" type="javax.sql.DataSource"
+	maxActive="100" maxIdle="30" maxWait="10000"
+	username="brasil" password="brasil" driverClassName="oracle.jdbc.driver.OracleDriver"
+	url="jdbc:oracle:thin:@//ARDC1SRP-SCAN.prosegur.com.ar:1521/brasil"/>
+ 
+</Context>

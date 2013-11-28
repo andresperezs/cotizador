@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" isSummaryWithPageHeaderAndFooter="true" isIgnorePagination="true" uuid="19a7ec84-62b2-4db0-869c-b93a27c3165f">
+	<property name="ireport.zoom" value="1.2396694214876032"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="56"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFD700">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFF5BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#FFD700">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#FFF5BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#FFD700">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#FFF5BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#FFD700">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#FFF5BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select ambiente,cantidad,descripcion,precio_capex_soft,precio_opex_out,producto,precio_capex_desa,round(precio_capex_hw)precio_capex_hw,precio_opex_tel ,precio_viajes,precio_formacion,
+(select valor mon from parametros where descripcion='moneda') moneda from (
+select a.descripcion ambiente,cantidad,(('Equipo virtual de '||to_char(procesador)||' Proc, '||to_char(memoria)||' GB de Memoria, '||to_char(disco)||' GB de Storage ')) descripcion,
+                (cantidad * precio_capex_soft)precio_capex_soft,(cantidad *  precio_opex_out) precio_opex_out, p.descripcion producto,(cantidad * precio_capex_desa)precio_capex_desa,(cantidad * precio_capex_hw)precio_capex_hw,0 precio_opex_tel ,0 precio_viajes,0 precio_formacion from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria <> 0                 
+                union all 
+                select a.descripcion,cantidad,(('Base de datos de '||to_char(disco)||' GB de Storage ')) descripcion,
+                (cantidad * precio_capex_soft),(cantidad *  precio_opex_out) precio_opex_out, p.descripcion producto,(cantidad * precio_capex_desa),(cantidad * precio_capex_hw),0,0,0  from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria = 0 and disco <> 0  
+                union all 
+                select a.descripcion,cantidad, p.descripcion descripcion ,
+                (cantidad * precio_capex_soft) precio_capex_soft,(cantidad *  precio_opex_out) precio_opex_out, V.OBSERVACIONES producto,(cantidad * precio_capex_desa)precio_capex_desa,(cantidad * precio_capex_hw) precio_capex_hw,0,0,0  from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria = 0 and disco = 0
+                and (tipo ='Fisico' or tipo ='Comunicaciones' or tipo like '%SO%')
+                union all 
+                select a.descripcion,1,(('Backup de '||to_char(cantidad)||' GB ')) descripcion ,
+                precio_capex_soft, (cantidad *  precio_opex_out) precio_opex_out, p.descripcion producto,precio_capex_desa, precio_capex_hw,0,0,0  from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria = 0 and disco = 0
+                and (tipo <>'Fisico' and tipo <>'Comunicaciones' and tipo not like '%SO%')
+                union all
+                select a.descripcion ambiente,cantidad,p.descripcion,
+                case when n.descripcion like '%COMPRASOFT%' then (precio * cantidad * meses) else 0 end precio_capex_soft,
+                case when n.descripcion like '%OUTSOURCE%' then (precio * cantidad * meses) else 0 end precio_opex_out,
+                C.OBSERVACIONES,
+                case when n.descripcion like '%DESA%' then (precio * cantidad * meses) else 0 end precio_capex_desa,
+                case when n.descripcion like '%COMPRAHARDWARE%' then (precio * cantidad * meses) else 0 end precio_capex_hw,
+                case when n.descripcion like '%TELEFONIA%' then (precio * cantidad * meses) else 0 end, 
+                case when n.descripcion like '%VIAJES%' then (precio * cantidad * meses) else 0 end ,
+                case when n.descripcion like '%FORMACION%' then (precio * cantidad * meses) else 0 end 
+        from cotizaciones_detalle c, productos 
+                p,naturaleza n,ambientes a where c.producto_id = p.producto_id and 
+                p.naturaleza_id = n.id and c.ambiente=a.ambiente_id and cotizacion_id=$P{id}  
+union all                
+select 'TOTAL',0,'' a,sum(precio_capex_soft),sum(precio_opex_out),'' ,sum(precio_capex_desa),sum(precio_capex_hw),sum(precio_opex_tel),sum(precio_viajes),sum(precio_formacion) from (                
+                select a.descripcion ambiente,cantidad,(('Equipo virtual de '||to_char(procesador)||' Proc, '||to_char(memoria)||' GB de Memoria, '||to_char(disco)||' GB de Storage ')) descripcion,
+                (cantidad * precio_capex_soft)precio_capex_soft,(cantidad *  precio_opex_out) precio_opex_out, p.descripcion producto,(cantidad * precio_capex_desa)precio_capex_desa,(cantidad * precio_capex_hw)precio_capex_hw,0 precio_opex_tel ,0 precio_viajes,0 precio_formacion from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria <> 0                 
+                union all 
+                select a.descripcion,cantidad,(('Base de datos de '||to_char(disco)||' GB de Storage ')) descripcion,
+                (cantidad * precio_capex_soft),(cantidad *  precio_opex_out) precio_opex_out, p.descripcion producto,(cantidad * precio_capex_desa),(cantidad * precio_capex_hw),0,0,0  from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria = 0 and disco <> 0  
+                union all 
+                select a.descripcion,cantidad, p.descripcion descripcion ,
+                (cantidad * precio_capex_soft) precio_capex_soft,(cantidad *  precio_opex_out) precio_opex_out, p.descripcion producto,(cantidad * precio_capex_desa)precio_capex_desa,(cantidad * precio_capex_hw) precio_capex_hw,0,0,0  from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria = 0 and disco = 0
+                and (tipo ='Fisico' or tipo ='Comunicaciones' or tipo like '%SO%')
+                union all 
+                select a.descripcion,1,(('Backup de '||to_char(cantidad)||' GB ')) descripcion ,
+                precio_capex_soft, (cantidad *  precio_opex_out) precio_opex_out, p.descripcion producto,precio_capex_desa, precio_capex_hw,0,0,0  from 
+                virtual v,ambientes a, productos p where id_cotizacion=$P{id} and v.ambiente=a.ambiente_id 
+                and p.producto_id = id_so and memoria = 0 and disco = 0
+                and (tipo <>'Fisico' and tipo <>'Comunicaciones' and tipo not like '%SO%')
+                union all
+                select a.descripcion ambiente,cantidad,p.descripcion,
+                case when n.descripcion like '%COMPRASOFT%' then (precio * cantidad * meses) else 0 end precio_capex_soft,
+                case when n.descripcion like '%OUTSOURCE%' then (precio * cantidad * meses) else 0 end precio_opex_out,
+                '',
+                case when n.descripcion like '%DESA%' then (precio * cantidad * meses) else 0 end precio_capex_desa,
+                case when n.descripcion like '%COMPRAHARDWARE%' then (precio * cantidad * meses) else 0 end precio_capex_hw,
+                case when n.descripcion like '%TELEFONIA%' then (precio * cantidad * meses) else 0 end, 
+                case when n.descripcion like '%VIAJES%' then (precio * cantidad * meses) else 0 end ,
+                case when n.descripcion like '%FORMACION%' then (precio * cantidad * meses) else 0 end 
+        from cotizaciones_detalle c, productos 
+                p,naturaleza n,ambientes a where c.producto_id = p.producto_id and 
+                p.naturaleza_id = n.id and c.ambiente=a.ambiente_id and cotizacion_id=$P{id} )a )b]]>
+	</queryString>
+	<field name="ambiente" class="java.lang.String"/>
+	<field name="cantidad" class="java.math.BigDecimal"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="precio_capex_soft" class="java.math.BigDecimal"/>
+	<field name="precio_opex_out" class="java.math.BigDecimal"/>
+	<field name="producto" class="java.lang.String"/>
+	<field name="precio_capex_desa" class="java.math.BigDecimal"/>
+	<field name="precio_capex_hw" class="java.math.BigDecimal"/>
+	<field name="precio_opex_tel" class="java.math.BigDecimal"/>
+	<field name="precio_viajes" class="java.math.BigDecimal"/>
+	<field name="precio_formacion" class="java.math.BigDecimal"/>
+	<field name="moneda" class="java.lang.String"/>	
+	<background>
+		<band height="555" splitType="Stretch">
+			<elementGroup/>
+		</band>
+	</background>
+	<title>
+		<band height="120" splitType="Stretch">
+			<frame>
+				<reportElement uuid="71006dfa-8a34-441d-a4c6-046640aa1c49" mode="Opaque" x="-20" y="0" width="822" height="65" forecolor="#006699" backcolor="#F6E81E"/>
+				<textField>
+					<reportElement uuid="e78cc5a4-61bb-4ae8-b1a4-d638bbee5b61" x="23" y="0" width="767" height="65"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="24"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="3" y="80" width="70" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ambiente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="481" y="80" width="58" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capex.compra.SW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="73" y="80" width="50" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="123" y="80" width="219" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="342" y="80" width="81" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="597" y="80" width="58" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capex.compra.HW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="539" y="80" width="58" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capex.Desarrollo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="655" y="80" width="58" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefonia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="423" y="80" width="58" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Outsourcing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44a0318e-c08c-4ab4-bb6d-090261366635" mode="Opaque" x="713" y="80" width="58" height="14" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Otros]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="3" y="-25" width="70" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ambiente}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="342" y="-25" width="81" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="123" y="-25" width="219" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph tabStopWidth="70"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="73" y="-25" width="50" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="481" y="-25" width="58" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda}+" "+$F{precio_capex_soft}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="539" y="-25" width="58" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda}+" "+$F{precio_capex_desa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="597" y="-25" width="58" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda}+" "+$F{precio_capex_hw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="655" y="-25" width="58" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda}+" "+$F{precio_opex_tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="423" y="-25" width="58" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda}+" "+$F{precio_opex_out}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="07f60e0d-59bb-49d9-8328-ddc842a65fa0" x="713" y="-25" width="58" height="22"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda}+" "+($F{precio_formacion}.add($F{precio_viajes}))]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="166" splitType="Stretch">
+			<bar3DChart>
+				<chart>
+					<reportElement uuid="ba2dec44-42cb-4535-807c-cacd845bcc66" x="473" y="0" width="323" height="166"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset resetType="Column" incrementType="Column"/>
+					<categorySeries>
+						<seriesExpression><![CDATA["DTI.CAPEX.COMPRASOFTWARE "+ $F{moneda}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ambiente}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{precio_capex_soft}]]></valueExpression>
+						<labelExpression><![CDATA["Software"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["DTI.CAPEX.DESARROLLOS "+$F{moneda}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ambiente}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{precio_capex_desa}]]></valueExpression>
+						<labelExpression><![CDATA["Desa"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["DTI.CAPEX.COMPRAHARDWARE "+$F{moneda}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ambiente}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{precio_capex_hw}]]></valueExpression>
+						<labelExpression><![CDATA["Hardware"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["TELEFONIA "+$F{moneda}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ambiente}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{precio_opex_tel}]]></valueExpression>
+						<labelExpression><![CDATA["Telefonia"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["OUTSOURCING "+$F{moneda}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ambiente}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{precio_opex_out}]]></valueExpression>
+						<labelExpression><![CDATA["outsourcing"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["OTROS "+ $F{moneda}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{ambiente}]]></categoryExpression>
+						<valueExpression><![CDATA[($F{precio_formacion}.add($F{precio_viajes}))]]></valueExpression>
+						<labelExpression><![CDATA["Otros"]]></labelExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+				</bar3DPlot>
+			</bar3DChart>
+			<staticText>
+				<reportElement uuid="f751deed-04ce-442e-97e3-1561b2eaffb2" mode="Opaque" x="4" y="139" width="100" height="20" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[TOTAL:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="61c1bb96-bdad-4be7-a9a7-690f275ca9bf" mode="Opaque" x="104" y="139" width="99" height="20" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{moneda} +" " +$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4d13e7bf-5ee9-41ff-a24f-dc9b02df832c" x="103" y="22" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda} +" " +$F{precio_capex_desa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1ae1029d-f343-4bed-8fcd-6c82fa7372a0" x="103" y="41" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda} +" " +$F{precio_capex_soft}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aa20b978-969f-49b6-b7a5-98460c550e16" x="103" y="60" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda} +" " +$F{precio_capex_hw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aa20b978-969f-49b6-b7a5-98460c550e16" x="103" y="80" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda} +" " +$F{precio_opex_tel}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="76d450b3-18c2-4d21-95a8-a049b68ff03e" x="4" y="22" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[DTI.CAPEX.DESARROLLOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76d450b3-18c2-4d21-95a8-a049b68ff03e" x="4" y="41" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[DTI.CAPEX.COMPRASOFTWARE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76d450b3-18c2-4d21-95a8-a049b68ff03e" x="4" y="60" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[DTI.CAPEX.COMPRAHARDWARE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f751deed-04ce-442e-97e3-1561b2eaffb2" mode="Opaque" x="4" y="2" width="100" height="20" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Naturaleza ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f751deed-04ce-442e-97e3-1561b2eaffb2" mode="Opaque" x="104" y="2" width="99" height="20" backcolor="#F6E81E"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[Monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76d450b3-18c2-4d21-95a8-a049b68ff03e" x="4" y="80" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[TELEFONIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76d450b3-18c2-4d21-95a8-a049b68ff03e" x="4" y="100" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[OUTSOURCING]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="aa20b978-969f-49b6-b7a5-98460c550e16" x="103" y="100" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda} +" " +$F{precio_opex_out}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aa20b978-969f-49b6-b7a5-98460c550e16" x="103" y="120" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moneda}+" "+($F{precio_formacion}.add($F{precio_viajes}))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="76d450b3-18c2-4d21-95a8-a049b68ff03e" x="4" y="120" width="100" height="20"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[OTROS]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

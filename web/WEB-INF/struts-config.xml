@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+      
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="login"  path="/login.do"/>
+    </global-forwards>
+
+    <form-beans>
+        <form-bean name="LoginForm" type="login.form.LoginForm"/>
+        <form-bean name="CotizadorForm" type="cotizador.form.CotizadorForm"/>
+        <form-bean name="ProductosForm" type="abm.productos.form.ProductosForm"/>
+        <form-bean name="NaturalezasForm" type="abm.naturalezas.form.NaturalezasForm"/>
+    </form-beans>
+     
+    <action-mappings>
+        <action input="/login.jsp" name="LoginForm" path="/login" scope="session" type="login.action.LoginAction">
+            <forward name="success" path="/success.jsp" />
+            <forward name="failure" path="/failure.jsp" />
+        </action>
+        
+        <action input="/cotizaciones.jsp" name="CotizadorForm" path="/cotizador" scope="session" type="cotizador.action.CotizadorAction">
+            <forward name="showIndex" path="/cotizaciones.jsp" />
+            <forward name="buscar" path="/cotizaciones.jsp" />
+            <forward name="showDetalle" path="/cotizaciones/cotizador.jsp" />
+            <forward name="vacioDetalle" path="/cotizaciones/cotizadorEmpty.jsp" />
+            <forward name="vacio" path="/cotizacionesEmpty.jsp" />
+            <forward name="volver" path="/login.jsp" />
+            <forward name="create" path="/cotizaciones/alta.jsp" />
+            <forward name="virtual" path="/cotizaciones/virtual.jsp" />
+            <forward name="base" path="/cotizaciones/base.jsp" />
+            <forward name="totales" path="/cotizaciones/totales.jsp" />
+            <forward name="backup" path="/cotizaciones/backup.jsp" />
+            <forward name="rack" path="/cotizaciones/rack.jsp" />
+            <forward name="editInfo" path="/cotizaciones/editInfo.jsp" />
+        </action>
+        
+        <action input="/abm/productos/list.jsp" name="ProductosForm" path="/productos" scope="session" type="abm.productos.action.ProductosAction">
+            <forward name="showIndex" path="/abm/productos/listEmpty.jsp" />
+            <forward name="buscar" path="/abm/productos/list.jsp" />
+            <forward name="nuevo" path="/abm/productos/alta.jsp" />
+        </action>
+
+        <action input="/abm/naturalezas/list.jsp" name="NaturalezasForm" path="/naturalezas" scope="session" type="abm.naturalezas.action.NaturalezasAction">
+            <forward name="showIndex" path="/abm/naturalezas/listEmpty.jsp" />
+             <forward name="buscar" path="/abm/naturalezas/list.jsp" />
+            <forward name="nuevo" path="/abm/naturalezas/alta.jsp" />
+        </action>
+        
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+   
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>
